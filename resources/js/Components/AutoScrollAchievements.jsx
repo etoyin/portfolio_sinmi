@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-function AutoScroll({slides}) {
+function AutoScrollAchievements({slides}) {
   const settings = {
     dots: true,
     infinite: true,
@@ -42,17 +42,15 @@ function AutoScroll({slides}) {
 
 
   return (
-    <div className="w-10/12 m-auto">
-      <h3 className="text-white text-center text-3xl font-bold">Reviews from Clients</h3>
-
-      <div className="mt-20">
+    <div className="bg-gradient-to-r from-blue-950 via-[#cf9742] to-[#565b24] p-2 sm:p-10">
+      <div className="mt-20 w-10/12 mx-auto">
       <Slider {...settings}>
       {
         slides.map((x) => {
             return(
-                <div className="text-[#121d30] mr-5 bg-white rounded-lg">
+                <div className="text-white  mr-5 rounded-lg">
                     <div className="flex h-32 items-center justify-center">
-                      <div className='rounded-full w-24 h-24 overflow-hidden'>
+                      <div className='rounded-full w-32 h-32 overflow-hidden'>
                         <img src={x.img} alt="" />
                       </div>
                     </div>
@@ -72,4 +70,4 @@ function AutoScroll({slides}) {
   );
 }
 
-export default AutoScroll;
+export default AutoScrollAchievements;

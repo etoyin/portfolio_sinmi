@@ -1,0 +1,1 @@
+import{j as i}from"./app-D5_Rs3Wf.js";function r({className:o="",...s}){return i.jsx("div",{...s,className:o,children:i.jsx("img",{src:"/img/sinmi_logo2.png",className:"h-full",alt:""})})}export{r as A};

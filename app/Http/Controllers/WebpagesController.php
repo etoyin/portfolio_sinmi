@@ -15,4 +15,16 @@ class WebpagesController extends Controller
         ]);
     }
 
+    public function about(Request $request): Response
+    {
+        return Inertia::render('About', [
+        ]);
+    }
+
+    public function contact(Request $request): Response
+    {
+        return Inertia::render('Contact', [
+        ]);
+    }
+
 }

@@ -1,4 +1,5 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
+import { Link } from '@inertiajs/react';
 import React, { useState } from 'react'
 
 function NavBar() {
@@ -24,10 +25,10 @@ function NavBar() {
                     <div className="flex items-center">
                         <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-base">
                             <li>
-                                <a href="#" className="text-white hover:underline" aria-current="page">Home</a>
+                                <Link href="/" className="text-white hover:underline" aria-current="page">Home</Link>
                             </li>
                             <li>
-                                <a href="#" className="text-white hover:underline">About</a>
+                                <Link href="/about" className="text-white hover:underline">About</Link>
                             </li>
                             <li>
                                 <a href="#" className="text-white hover:underline">Thoughts</a>
@@ -36,7 +37,7 @@ function NavBar() {
                                 <a href="#" className="text-white hover:underline">Projects</a>
                             </li>
                             <li>
-                                <a href="#" className="text-white hover:underline">Contact</a>
+                                <Link href="/contact" className="text-white hover:underline">Contact</Link>
                             </li>
 
                             <li>
@@ -53,10 +54,10 @@ function NavBar() {
                 <div className="">
                     <ul className="font-medium text-base space-y-4">
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline" aria-current="page">Home</a>
+                            <Link href="/" className="text-white text-sm hover:underline" aria-current="page">Home</Link>
                         </li>
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline">About</a>
+                            <Link href="/about" className="text-white text-sm hover:underline">About</Link>
                         </li>
                         <li>
                             <a href="#" className="text-white text-sm hover:underline">Thoughts</a>
@@ -65,7 +66,7 @@ function NavBar() {
                             <a href="#" className="text-white text-sm hover:underline">Projects</a>
                         </li>
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline">Contact</a>
+                            <Link href="/contact" className="text-white text-sm hover:underline">Contact</Link>
                         </li>
 
                         <li>

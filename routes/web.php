@@ -16,6 +16,9 @@ use Inertia\Inertia;
 // });
 
 Route::get('/', [WebpagesController::class, 'home'])->name('home');
+Route::get('/about', [WebpagesController::class, 'about'])->name('about');
+Route::get('/contact', [WebpagesController::class, 'contact'])->name('contact');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

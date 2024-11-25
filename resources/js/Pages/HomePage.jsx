@@ -125,7 +125,7 @@ function HomePage() {
                         <div className="w-full bg-[#121d30] p-2 text-center uppercase text-white font-bold">
                             About
                         </div>
-                        <Link className='w-full' to="#">
+                        <Link className='w-full' href="/about">
                             <div className="relative w-full group">
                                 <img src="/img/about.jpg" alt="" />
                                 <div className="transition-all ease-out duration-700 h-10 opacity-0 group-hover:opacity-100 flex  absolute capitalize text-lg justify-center items-center text-white left-0 top-0 w-full h-full bg-black bg-opacity-50">
@@ -166,7 +166,7 @@ function HomePage() {
                         <div className="w-full bg-[#121d30] p-2 text-center uppercase text-white font-bold">
                             Contact
                         </div>
-                        <Link className='w-full' to="#">
+                        <Link className='w-full' href="/contact">
                             <div className="relative w-full group">
                                 <img src="/img/contact.jpg" alt="" />
                                 <div className="transition-all ease-out duration-700 h-10 opacity-0 group-hover:opacity-100 flex  absolute capitalize text-lg justify-center items-center text-white left-0 top-0 w-full h-full bg-black bg-opacity-50">
@@ -193,7 +193,7 @@ function HomePage() {
                 </div>
             </div>
 
-            <div className="bg-[#121d30] py-10 p-5 m-auto">
+            <div className="bg-[#121d30] bg-opacity-50 py-10 p-5 m-auto">
                 <AutoScroll slides={slides} />
             </div>
             <Footer/>
