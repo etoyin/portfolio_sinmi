@@ -59,9 +59,11 @@ function HomePage() {
                     </h3>
 
                     <div className="flex justify-between uppercase font-bold p-5 w-full sm:w-[500px]">
-                        <div className="px-4 py-2 rounded-full bg-gradient-to-r from-[#565b24] via-[#cf9742] to-blue-950 text-sm text-white cursor-pointer">
-                            Book Sinmi
-                        </div>
+                        <Link href='/book'>
+                            <div className="px-4 py-2 rounded-full bg-gradient-to-r from-[#565b24] via-[#cf9742] to-blue-950 text-sm text-white cursor-pointer">
+                                Book Sinmi
+                            </div>
+                        </Link>
 
                         <div className="px-4 py-2 rounded-full bg-gradient-to-r from-[#565b24] via-[#cf9742] to-blue-950 text-sm text-white cursor-pointer">
                             Join the journey
@@ -152,7 +154,7 @@ function HomePage() {
                         <div className="w-full bg-[#121d30] p-2 text-center uppercase text-white font-bold">
                             Projects
                         </div>
-                        <Link className='w-full' to="#">
+                        <Link className='w-full' href="/projects">
                             <div className="relative w-full group">
                                 <img src="/img/project.jpg" alt="" />
                                 <div className="transition-all ease-out duration-700 h-10 opacity-0 group-hover:opacity-100 flex  absolute capitalize text-lg justify-center items-center text-white left-0 top-0 w-full h-full bg-black bg-opacity-50">
@@ -180,7 +182,7 @@ function HomePage() {
                         <div className="w-full bg-[#121d30] p-2 text-center uppercase text-white font-bold">
                             Booking
                         </div>
-                        <Link className='w-full' to="#">
+                        <Link className='w-full' href="/book">
                             <div className="relative w-full group">
                                 <img src="/img/book.jpg" alt="" />
                                 <div className="transition-all ease-out duration-700 h-10 opacity-0 group-hover:opacity-100 flex  absolute capitalize text-lg justify-center items-center text-white left-0 top-0 w-full h-full bg-black bg-opacity-50">

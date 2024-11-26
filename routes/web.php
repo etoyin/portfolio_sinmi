@@ -18,6 +18,8 @@ use Inertia\Inertia;
 Route::get('/', [WebpagesController::class, 'home'])->name('home');
 Route::get('/about', [WebpagesController::class, 'about'])->name('about');
 Route::get('/contact', [WebpagesController::class, 'contact'])->name('contact');
+Route::get('/book', [WebpagesController::class, 'book'])->name('book');
+Route::get('/projects', [WebpagesController::class, 'projects'])->name('projects');
 
 
 Route::get('/dashboard', function () {

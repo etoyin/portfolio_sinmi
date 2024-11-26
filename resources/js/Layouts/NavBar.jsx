@@ -31,17 +31,17 @@ function NavBar() {
                                 <Link href="/about" className="text-white hover:underline">About</Link>
                             </li>
                             <li>
-                                <a href="#" className="text-white hover:underline">Thoughts</a>
+                                <Link href="#" className="text-white hover:underline">Thoughts</Link>
                             </li>
                             <li>
-                                <a href="#" className="text-white hover:underline">Projects</a>
+                                <Link href="/projects" className="text-white hover:underline">Projects</Link>
                             </li>
                             <li>
                                 <Link href="/contact" className="text-white hover:underline">Contact</Link>
                             </li>
 
                             <li>
-                                <a href="#" className="p-2 bg-gradient-to-r from-[#565b24] via-[#cf9742] to-blue-950 text-sm text-white hover:underline">Book Sinmi</a>
+                                <Link href="/book" className="p-2 bg-gradient-to-r from-[#565b24] via-[#cf9742] to-blue-950 text-sm text-white hover:underline">Book Sinmi</Link>
                             </li>
                         </ul>
                     </div>
@@ -60,17 +60,17 @@ function NavBar() {
                             <Link href="/about" className="text-white text-sm hover:underline">About</Link>
                         </li>
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline">Thoughts</a>
+                            <Link href="#" className="text-white text-sm hover:underline">Thoughts</Link>
                         </li>
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline">Projects</a>
+                            <Link href="/projects" className="text-white text-sm hover:underline">Projects</Link>
                         </li>
                         <li>
                             <Link href="/contact" className="text-white text-sm hover:underline">Contact</Link>
                         </li>
 
                         <li>
-                            <a href="#" className="text-white text-sm hover:underline">Book Sinmi</a>
+                            <Link href="/book" className="text-white text-sm hover:underline">Book Sinmi</Link>
                         </li>
                     </ul>
                 </div>

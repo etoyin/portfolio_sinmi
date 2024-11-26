@@ -27,4 +27,16 @@ class WebpagesController extends Controller
         ]);
     }
 
+    public function book(Request $request): Response
+    {
+        return Inertia::render('Book', [
+        ]);
+    }
+
+    public function projects(Request $request): Response
+    {
+        return Inertia::render('Projects', [
+        ]);
+    }
+
 }

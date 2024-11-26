@@ -37,7 +37,7 @@ function About() {
     <div>
         <NavBar />
         <div className="relative bg-[url('/img/about2.jpg')] bg-top bg-cover bg-fixed bg-no-repeat h-screen">
-            <h2 className="absolute  bottom-10 left-10 sm:left-32 text-white text-3xl md:text-6xl font-bold uppercase">About Sinmi</h2>
+            <h2 className="absolute  bottom-10 left-10 sm:left-32 text-white text-3xl md:text-6xl bg-black bg-opacity-50 font-bold uppercase">About Sinmi</h2>
             <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0"></div>
             
         </div>
