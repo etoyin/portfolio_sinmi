@@ -31,7 +31,7 @@ function NavBar() {
                                 <Link href="/about" className="text-white hover:underline">About</Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white hover:underline">Thoughts</Link>
+                                <Link href="/thoughts" className="text-white hover:underline">Thoughts</Link>
                             </li>
                             <li>
                                 <Link href="/projects" className="text-white hover:underline">Projects</Link>
@@ -60,7 +60,7 @@ function NavBar() {
                             <Link href="/about" className="text-white text-sm hover:underline">About</Link>
                         </li>
                         <li>
-                            <Link href="#" className="text-white text-sm hover:underline">Thoughts</Link>
+                            <Link href="/thoughts" className="text-white text-sm hover:underline">Thoughts</Link>
                         </li>
                         <li>
                             <Link href="/projects" className="text-white text-sm hover:underline">Projects</Link>

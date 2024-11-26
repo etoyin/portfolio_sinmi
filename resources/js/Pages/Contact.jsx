@@ -4,11 +4,17 @@ import TextInput from '@/Components/TextInput'
 import Footer from '@/Layouts/Footer'
 import NavBar from '@/Layouts/NavBar'
 import { Textarea } from '@headlessui/react'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
 function Contact() {
   return (
     <div>
+        <Head >
+            <title>Contact</title>
+            <meta name="description" content="Contact, Blog - Sinmi Akinsanmi's website Portfolio page." />
+            <meta name="keywords" content="Sinmi Akinsanmi, Home Page project management, operations management, product strategy and management, business management, business development, agile software development." />
+        </Head>
         <NavBar />
         <div className="relative bg-[url('/img/contact.jpg')] bg-top bg-cover bg-fixed bg-no-repeat h-screen">
             <h2 className="absolute  bottom-10 left-10 sm:left-32 text-white text-3xl md:text-6xl bg-black bg-opacity-50 font-bold uppercase">Contact Sinmi</h2>

@@ -29,14 +29,17 @@ class WebpagesController extends Controller
 
     public function book(Request $request): Response
     {
-        return Inertia::render('Book', [
-        ]);
+        return Inertia::render('Book');
     }
 
     public function projects(Request $request): Response
     {
-        return Inertia::render('Projects', [
-        ]);
+        return Inertia::render('Projects');
+    }
+
+    public function thoughts(Request $request): Response
+    {
+        return Inertia::render('Thoughts');
     }
 
 }

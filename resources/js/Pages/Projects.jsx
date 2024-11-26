@@ -1,6 +1,7 @@
 import Project_grid from '@/Components/Project_grid'
 import Footer from '@/Layouts/Footer'
 import NavBar from '@/Layouts/NavBar'
+import { Head } from '@inertiajs/react'
 import React, { useState } from 'react'
 
 function Projects() {
@@ -34,6 +35,11 @@ function Projects() {
   
     return (
     <div>
+        <Head >
+            <title>Projects</title>
+            <meta name="description" content="Projects - Sinmi Akinsanmi's website Portfolio page." />
+            <meta name="keywords" content="Sinmi Akinsanmi, project management, operations management, product strategy and management, business management, business development, agile software development." />
+        </Head>
         <NavBar />
         <div className="relative bg-[url('/img/project.jpg')] bg-top bg-cover bg-fixed bg-no-repeat h-screen">
             <h2 className="absolute  bottom-10 left-10 sm:left-32 text-white text-3xl md:text-6xl font-bold bg-black bg-opacity-50 uppercase">

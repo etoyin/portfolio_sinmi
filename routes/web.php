@@ -20,6 +20,7 @@ Route::get('/about', [WebpagesController::class, 'about'])->name('about');
 Route::get('/contact', [WebpagesController::class, 'contact'])->name('contact');
 Route::get('/book', [WebpagesController::class, 'book'])->name('book');
 Route::get('/projects', [WebpagesController::class, 'projects'])->name('projects');
+Route::get('/thoughts', [WebpagesController::class, 'thoughts'])->name('thoughts');
 
 
 Route::get('/dashboard', function () {

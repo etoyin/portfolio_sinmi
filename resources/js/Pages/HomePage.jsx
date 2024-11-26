@@ -1,7 +1,7 @@
 import AutoScroll from '@/Components/AutoScroll';
 import NavBar from '@/Layouts/NavBar';
 import Footer from '@/Layouts/Footer';
-import { Link } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 import React, { useState } from 'react';
 import { ReactTyped } from "react-typed";
 
@@ -36,6 +36,11 @@ function HomePage() {
 
     return (
         <div>
+            <Head >
+                <title>Home Page</title>
+                <meta name="description" content="Home Page, Blog - Sinmi Akinsanmi's website Portfolio page." />
+                <meta name="keywords" content="Sinmi Akinsanmi, Home Page project management, operations management, product strategy and management, business management, business development, agile software development." />
+            </Head>
             <NavBar />
             <div className="relative bg-[url('/img/road.jpg')] bg-center bg-cover bg-fixed bg-no-repeat h-screen">    
                 <div className="z-5 flex flex-col items-center justify-center absolute left-0 top-0 bg-[#575c25] bg-opacity-60 w-full h-full">
@@ -140,7 +145,7 @@ function HomePage() {
                         <div className="w-full bg-[#121d30] p-2 text-center uppercase text-white font-bold">
                             Thoughts
                         </div>
-                        <Link className='w-full' to="#">
+                        <Link className='w-full' href="/thoughts">
                             <div className="relative w-full group">
                                 <img src="/img/thoughts.jpg" alt="" />
                                 <div className="transition-all ease-out duration-700 h-10 opacity-0 group-hover:opacity-100 flex  absolute capitalize text-lg justify-center items-center text-white left-0 top-0 w-full h-full bg-black bg-opacity-50">
