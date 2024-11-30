@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WebpagesController;
 use Illuminate\Foundation\Application;
@@ -23,9 +24,21 @@ Route::get('/projects', [WebpagesController::class, 'projects'])->name('projects
 Route::get('/thoughts', [WebpagesController::class, 'thoughts'])->name('thoughts');
 
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return Inertia::render('AdminDashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/categories', [AdminController::class, 'thoughts_category_page'])->name('thoughts_category_page');
+    Route::post('/dashboard/categories', [AdminController::class, 'add_thoughts_category'])->name('post_category');
+    Route::get('/delete_cat/{id}', [AdminController::class, 'delete_thoughts_category'])->name('delete_category');
+    Route::get('/dashboard/thoughts', [AdminController::class, 'thoughts'])->name('thoughts');
+    Route::post('/thoughts/post', [AdminController::class, 'post_thoughts'])->name('post_thoughts');
+
+});
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

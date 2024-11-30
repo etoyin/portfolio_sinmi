@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Thought;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -39,7 +41,12 @@ class WebpagesController extends Controller
 
     public function thoughts(Request $request): Response
     {
-        return Inertia::render('Thoughts');
+        $thoughts = Thought::all();
+        $cat = Category::all();
+        return Inertia::render('Thoughts', [
+            'cat' => $cat,
+            'thoughts' => $thoughts
+        ]);
     }
 
 }

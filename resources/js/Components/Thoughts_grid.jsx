@@ -15,12 +15,14 @@ function Thoughts_grid({thoughts}) {
                 return(
                     <div key={i} className="group w-full sm:w-72 m-10 shadow rounded-lg overflow-hidden">
                         <div className="overflow-hidden">
-                            <img src={x.featured_image} alt=""/>
+                            <img src={'/storage/'+x.img_location} alt=""/>
                         </div>
                         <div className=" text-sm flex flex-col justify-center text-center text-white p-2 bg-black bg-opacity-50">
-                            <Link href="#"><div className="w-20 py-1 my-2 px-2 rounded-full text-center capitalize bg-blue-400">{x.category}</div></Link>
+                            <Link href="#"><div className=" py-1 my-2 px-2 rounded-full text-center capitalize bg-blue-400">{x.categories}</div></Link>
                             <h2 className="font-semibold text-base text-center uppercase">{x.title}</h2>
-                            <p className="">{trunc(x.body)}</p>
+                            <p className="">
+                                <span dangerouslySetInnerHTML={{ __html: x.content.substring(0, 100) }}/>
+                            </p>
                             <Link href="#"><p className="font-semibold">Read More</p></Link>
                         </div>
                     </div>
