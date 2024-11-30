@@ -31,7 +31,11 @@ function Thoughts(props) {
           </div>
         </div>
         <div className="">
-          <Thoughts_grid  thoughts={thoughts}/>
+          {
+            thoughts ?
+            <Thoughts_grid  thoughts={thoughts}/>:
+            <div className='text-center'>No thoughts yet!</div>
+          }
         </div>
         <Footer />
     </div>
