@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Project;
 use App\Models\Thought;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -36,7 +37,10 @@ class WebpagesController extends Controller
 
     public function projects(Request $request): Response
     {
-        return Inertia::render('Projects');
+        $projects = Project::all();
+        return Inertia::render('Projects', [
+            'projects' => $projects
+        ]);
     }
 
     public function thoughts(Request $request): Response

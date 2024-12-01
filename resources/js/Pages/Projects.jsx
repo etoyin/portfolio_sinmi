@@ -4,34 +4,11 @@ import NavBar from '@/Layouts/NavBar'
 import { Head } from '@inertiajs/react'
 import React, { useState } from 'react'
 
-function Projects() {
+function Projects(props) {
 
-    const [projects, setProjects] = useState([
-        {
-            title: 'WORKSURVAYFORM',
-            description: 'Workplace Satisfaction Survey This project contains the source code for a simple yet elegant workplace satisfaction survey form. The form collects feedback from employees about their workplace experiences and suggestions for improvements.!',
-            featured_image: 'img/feat_img.jpeg'            
-        },
-
-        {
-            title: 'Tic tac toe',
-            description: 'Robot Pointing on a Wall Circle with gradienTic-Tac-Toe Web application USING HTML/CSS/JS',
-            featured_image: 'img/feat_img.jpeg'            
-        },
-
-        {
-            title: 'Unit calculator',
-            description: 'A versatile Unit Calculator that converts between Imperial and Metric units for length, weight, and volume. Features easy-to-use input fields, real-time conversion, and a dark mode toggle for a user-friendly experience.',
-            featured_image: 'img/feat_img.jpeg'            
-        },
-
-        {
-            title: 'Silver Oak University Website',
-            description: 'A responsive and modern website for Silver Oak University, featuring sections for About Us, Courses, Contact, and Events. The site includes a video background, dynamic animations, and a user-friendly navigation bar.',
-            featured_image: 'img/feat_img.jpeg'            
-        },
-
-    ])
+    const [projects, setProjects] = useState(props.projects);
+    console.log(props.projects);
+    
   
     return (
     <div>

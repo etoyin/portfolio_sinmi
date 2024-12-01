@@ -35,7 +35,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/delete_cat/{id}', [AdminController::class, 'delete_thoughts_category'])->name('delete_category');
     Route::get('/dashboard/thoughts', [AdminController::class, 'thoughts'])->name('thoughts');
     Route::post('/thoughts/post', [AdminController::class, 'post_thoughts'])->name('post_thoughts');
-
+    Route::post('/projects/post', [AdminController::class, 'post_projects'])->name('post_projects');
+    Route::get('/dashboard/projects', [AdminController::class, 'projects'])->name('projects');
 });
 
 

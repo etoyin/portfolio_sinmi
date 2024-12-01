@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Project;
 use App\Models\Thought;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -114,9 +115,7 @@ class AdminController extends Controller
         if ($request->hasFile('file')) {
             $file = Storage::disk('public')->put(date('Y-m-d').'/thoughts/'.$request->title, $request->file('file'));
         };
-
-
-        
+    
         $posts = Thought::create([
             'title' => $request->title,
             'content' => $request->content,
@@ -134,4 +133,47 @@ class AdminController extends Controller
         return json_encode($data);
     }
 
+    public function projects()
+    {
+        $projects = Project::all();
+        return Inertia::render('Admin/Projects',[
+            'projects' => $projects
+        ]);
+    }
+
+
+
+    public function post_projects(Request $request)
+    {
+        // return (json_encode($request->fil));
+        $request->validate([
+            'title' => 'required|string|max:255|unique:'.Thought::class,
+            'description' => 'required|string|min:25|max:25555',
+            // 'email' => 'required|string|email|max:255|unique:' . User::class,
+            'file' => [
+                File::types(['jpeg', 'jpg', 'gif', 'png'])
+                    ->max(50 * 1024),
+            ],
+        ]);
+
+        // $file = null;
+
+        if ($request->hasFile('file')) {
+            $file = Storage::disk('public')->put(date('Y-m-d').'/projects/'.$request->title, $request->file('file'));
+        };
+    
+        $posts = Project::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'img_location' => ($file) ? $file : '',
+        ]);
+
+        $data = [
+            'success' => true,
+            'message' => 'Project Added',
+            'posts' => $posts,
+        ];
+
+        return json_encode($data);
+    }
 }

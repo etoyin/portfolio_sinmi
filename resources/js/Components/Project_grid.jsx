@@ -9,20 +9,41 @@ function Project_grid({projects}) {
         return str.substring(0,100);
     }
   return (
-    <div className='w-full mx-auto flex flex-wrap justify-center sm:w-10/12'>
+    <div class="grid gap-6 lg:grid-cols-3 xl:gap-x-12">
         {
-            projects.map((x, i) => {
-                return(
-                    <div key={i} className="relative group w-full sm:w-64 m-10 shadow rounded-lg">
-                        <img src={x.featured_image} alt=""/>
-                        <div className="hidden group-hover:block absolute text-sm flex flex-col justify-center p-2 text-white bg-black bg-opacity-50 left-0 top-0 w-full h-full">
-                            <h2 className="font-semibold text-base uppercase">{i+1 + ". " + x.title}</h2>
-                            <p className="">{trunc(x.description)}</p>
-                            <Link href="#"><p className="font-semibold">Read More</p></Link>
+            projects ? 
+            projects.map((each, i) => {
+                return (
+                    <div key={i} class="my-6 lg:mb-0">
+                        <div class="relative mb-6 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        <img src={"/storage/"+each.img_location} class="w-full" alt={each.title} />
+                        <Link href={"/news_update/get_one_news/"+each.id}>
+                            <div
+                            class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,98.4%,.15)]">
+                            </div>
+                        </Link>
                         </div>
+
+                        <h5 class="mb-3 text-lg font-bold capitalize">{each.title}</h5>
+                        
+                        <p class="mb-6 text-neutral-500 dark:text-neutral-300">
+                        <small>Published <u>{each.created_at.split("T")[0]}</u> by
+                            <a href="#!">Admin</a></small>
+                        </p>
+                        <p class="text-neutral-500 dark:text-neutral-300">
+                        <span dangerouslySetInnerHTML={{ __html: each.description.substring(0, 100) }}/>
+                        <Link className="text-blue" href={"/news_update/get_one_news/"+each.id}>
+                            ...read more
+                        </Link>
+                        </p>
                     </div>
                 )
             })
+            :
+            <div className="text-center text-xl slide font-bold uppercase">
+                No Projects found
+            </div>
         }
     </div>
   )
