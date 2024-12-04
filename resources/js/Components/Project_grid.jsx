@@ -33,7 +33,7 @@ function Project_grid({projects}) {
                         </p>
                         <p class="text-neutral-500 dark:text-neutral-300">
                         <span dangerouslySetInnerHTML={{ __html: each.description.substring(0, 100) }}/>
-                        <Link className="text-blue" href={"/news_update/get_one_news/"+each.id}>
+                        <Link className="text-blue" href={`/projects/${each.id}/${each.title}`}>
                             ...read more
                         </Link>
                         </p>

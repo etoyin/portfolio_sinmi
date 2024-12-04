@@ -53,4 +53,24 @@ class WebpagesController extends Controller
         ]);
     }
 
+
+    public function one_thought($id, $slug): Response
+    {
+        $one_thought = Thought::whereId($id)->get();
+
+        return Inertia::render('OneThought', [
+            'one_thought' => $one_thought
+        ]);
+    }
+
+    public function one_project($id, $slug): Response
+    {
+        $one_project = Project::whereId($id)->get();
+
+        return Inertia::render('OneProject', [
+            'one_project' => $one_project
+        ]);
+
+    }
+
 }

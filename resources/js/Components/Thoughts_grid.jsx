@@ -23,7 +23,7 @@ function Thoughts_grid({thoughts}) {
                             <p className="">
                                 <span dangerouslySetInnerHTML={{ __html: x.content.substring(0, 100) }}/>
                             </p>
-                            <Link href="#"><p className="font-semibold">Read More</p></Link>
+                            <Link href={`/thoughts/${x.id}/${x.slug}`}><p className="font-semibold">Read More</p></Link>
                         </div>
                     </div>
                 )

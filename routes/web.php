@@ -22,6 +22,8 @@ Route::get('/contact', [WebpagesController::class, 'contact'])->name('contact');
 Route::get('/book', [WebpagesController::class, 'book'])->name('book');
 Route::get('/projects', [WebpagesController::class, 'projects'])->name('projects');
 Route::get('/thoughts', [WebpagesController::class, 'thoughts'])->name('thoughts');
+Route::get('/thoughts/{id}/{slug}', [WebpagesController::class, 'one_thought'])->name('one_thoughts');
+Route::get('/projects/{id}/{slug}', [WebpagesController::class, 'one_project'])->name('one_project');
 
 
 // Route::get('/dashboard', function () {
