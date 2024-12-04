@@ -29,9 +29,7 @@ function OneThought(props) {
 
             <p className="text-base bg-blue-300 w-fit p-1 rounded shadow text-white my-2">{props.one_thought[0].categories}</p>
 
-            <div className="">
-                {props.one_thought[0].content}
-            </div>
+            <div className="" dangerouslySetInnerHTML={{ __html: props.one_thought[0].content }}/>
         </div>
     </div>
   )

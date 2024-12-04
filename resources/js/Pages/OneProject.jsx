@@ -27,9 +27,7 @@ function OneProject(props) {
             <img src={'/storage/'+props.one_project[0].img_location} className='' alt="" srcset="" />
           </div>
 
-          <div className="">
-            {props.one_project[0].description}
-          </div>
+          <div className="" dangerouslySetInnerHTML={{ __html: props.one_project[0].description }}/>
         </div>
     </div>
   )
